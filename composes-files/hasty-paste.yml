@@ -1,11 +1,11 @@
-# Maintainer: Mickael "PAPAMICA" Asseline
+# Maintainer: Vagelis Fragkos (Xneo1)
 # Update: 2022-05-10
 
 #& type: 3
 #& title: Hastebin
 #& description: Share your code easily
 #& note: Website: <a href='https://hastebin.com/about.md' target='_blank' rel='noopener'>Hastebin.com</a>
-#& categories: SelfHosted, PAPAMICA
+#& categories: SelfHosted, xneo1
 #& platform: linux
 #& logo: https://progsoft.net/images/hastebin-icon-b45e3f5695d3f577b2630648bd00584195822e3d.png
 
@@ -34,7 +34,7 @@ services:
     networks:
       - default
     labels:
-      - "autoupdate=monitor" # https://github.com/PAPAMICA/container-updater
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
       - "traefik.enable=true"
       - "traefik.http.routers.$SERVICE.entrypoints=https"
       - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
