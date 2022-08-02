@@ -6,7 +6,7 @@ import json
 import datetime
 from textwrap import indent
 
-GITHUB_REPOSITORY_URL = 'https://github.com/PAPAMICA/docker-compose-collection'
+GITHUB_REPOSITORY_URL = 'https://github.com/xneo1/docker-compose-collection'
 SERVICES="|:--:|--|--|--|--|"
 SERVICES_TODO="|:--:|--|"
 try:
@@ -93,7 +93,7 @@ for filename in sorted(glob.glob("composes-files/*.y*ml")):
             dataset["env"] = env
             templates.append(dataset)
             print (f" ✅ {filename} ")
-            SERVICES=SERVICES + f'\n| ✅ | <img src="{logo}" alt="{file_name}" width="20"/> [{file_name}](https://github.com/PAPAMICA/docker-compose-collection/tree/master/composes-files/{file_name}.yml) | [{website}]({link}) | {date} | {maintainer} |'
+            SERVICES=SERVICES + f'\n| ✅ | <img src="{logo}" alt="{file_name}" width="20"/> [{file_name}](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/{file_name}.yml) | [{website}]({link}) | {date} | {maintainer} |'
             nb_a += 1
             
         else:
