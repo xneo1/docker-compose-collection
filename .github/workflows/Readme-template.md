@@ -93,7 +93,7 @@ I automated the creation of the json template file for Portainer and the update 
 
 If you want to add a new docker-compose, you must use the following template:
 <details>
-<summary>docker-compose file</summary>  
+<summary>Copy the docker-compose template file:</summary>  
   
   
 ```yaml
