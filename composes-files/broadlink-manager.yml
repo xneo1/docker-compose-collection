@@ -9,7 +9,7 @@
 #& platform: linux
 #& logo: https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/broadlink.png
 
-#% SERVICE: Name of the service (No spaces or points) [aria2-pro]
+#% SERVICE: Name of the service (No spaces or points) [broadlinkmanager]
 #% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config/]
 #% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
