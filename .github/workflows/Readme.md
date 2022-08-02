@@ -54,7 +54,6 @@ You can deploye a compatible Docker environment with Portainer and Traefik with:
 # Utilisation
 ## Portainer
 Add this URL in Portainer:
-
 ```
 https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/templates-portainer.json
 ```
