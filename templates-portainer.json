@@ -82,6 +82,49 @@
         },
         {
             "type": 3,
+            "title": "Aria2Pro",
+            "name": "Aria2Pro",
+            "description": "A perfect Aria2 Docker image. Out of the box, just add download tasks and don't need to think about anything else.",
+            "note": "Website: <a href='https://github.com/P3TERX/Aria2-Pro-Core/blob/master/README.md' target='_blank' rel='noopener'>Aria2Pro</a>",
+            "categories": [
+                "SelfHosted",
+                "Downloading",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://seeklogo.com/images/A/Aria_Pro_II-logo-6937ED8402-seeklogo.com.png",
+            "repository": {
+                "stackfile": "composes-files/aria2pro.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "aria2-pro"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data localization ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config/"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: or service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Audacity",
             "name": "Audacity",
             "description": "Audacity is an easy-to-use, multi-track audio editor and recorder. Developed by a group of volunteers as open source.",
