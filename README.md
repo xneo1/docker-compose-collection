@@ -30,7 +30,7 @@ All docker-compose are commented and are configured using variables.
 
 They all include support for Traefik.
 
-You can deploye a compatible Docker environment with Portainer and Traefik with:
+You can deploy a compatible Docker environment with Portainer and Traefik with:
 <p align="center">
   <a href="https://github.com/PAPAMICA/docker-environment"><img src="https://img.shields.io/badge/docker_environment-%2300B8FC.svg?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
@@ -317,7 +317,7 @@ You can deploye a compatible Docker environment with Portainer and Traefik with:
 Add this URL in Portainer:
 
 ```
-https://raw.githubusercontent.com/PAPAMICA/docker-compose-collection/master/templates-portainer.json
+https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/templates-portainer.json
 ```
 
 ![PORTAINER](https://i.imgur.com/M49ssCN.png)
@@ -330,7 +330,7 @@ Install Git :
 
 Clone repo
 ```bash
-git clone https://github.com/PAPAMICA/docker-compose-collection/
+git clone https://github.com/xneo1/docker-compose-collection/
 ```
 
 
