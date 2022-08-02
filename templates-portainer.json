@@ -260,7 +260,7 @@
             "categories": [
                 "SelfHosted",
                 "Mediacenter",
-                "PAPAMICA"
+                "xneo1"
             ],
             "platform": "linux",
             "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bazarr.png",
@@ -301,12 +301,12 @@
                 {
                     "name": "FOLDER_MOVIES",
                     "label": "Your movies folder",
-                    "description": "Exemple: /data/movies"
+                    "description": "Example: /portainer/Files/movies"
                 },
                 {
                     "name": "FOLDER_SERIES",
                     "label": "Your series folder",
-                    "description": "Exemple: /data/series"
+                    "description": "Example: /portainer/Files/series"
                 }
             ]
         },
