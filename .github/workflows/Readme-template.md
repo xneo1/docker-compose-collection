@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/xneo1">
-    <img src="[https://zupimages.net/up/20/04/7vtd.png](https://avatars.githubusercontent.com/u/2511293?v=4)" width="140px" alt="xneo1" />
+    <img src="https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/Anchor2.png" width="140px" alt="xneo1" />
   </a>
 </p>
 
