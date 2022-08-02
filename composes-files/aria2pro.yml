@@ -16,10 +16,8 @@
 
 # Work with Portainer
 
-version: "3.8"
-
+version: "2.0"
 services:
-
   aria2pro:
     container_name: aria2-pro
     image: p3terx/aria2-pro
