@@ -1,0 +1,66 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-02
+
+#& type: 3
+#& title: gitlab
+#& description: The One DevOps Platform
+#& note: Website: <a href='https://hub.docker.com/r/gitlab/gitlab-ce' target='_blank' rel='noopener'>Broadlink-manager</a>
+#& categories: SelfHosted, Developer, xneo1
+#& platform: linux
+#& logo: https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/gitlab.png
+
+#% SERVICE: Name of the service (No spaces or points) [gitlab]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config/]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "2"
+services:
+  # Gitlab : https://about.gitlab.com/get-help/
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    container_name: $SERVICE
+    restart: unless-stopped
+    environment:
+      STORAGE_TYPE: file
+    ports:
+      - '7680:80'
+      - '7643:443'
+    volumes:
+      - $DATA_LOCATION/$SERVICE/data:/var/opt/gitlab
+      - $DATA_LOCATION/$SERVICE/logs:/var/log/gitlab
+      - $DATA_LOCATION/$SERVICE/config:/var/log/gitlab
+    healthcheck:
+      test: wget -s 'http://localhost:7643'
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+      - gitlab
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.entrypoints=https"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls=true"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.docker.network=$NETWORK"
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    container_name: '$SERVICE'-runner
+    restart: unless-stopped
+    depends_on:
+      - gitlab
+    volumes:
+      - $DATA_LOCATION/$SERVICE/config-runner:/etc/gitlab-runner
+      - /var/run/docker.sock:/var/run/docker.sock
+     networks:
+      - default
+      - gitlab
+
+networks:
+  default:
+    external:
+      name: $NETWORK
