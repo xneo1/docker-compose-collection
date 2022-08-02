@@ -1148,6 +1148,49 @@
         },
         {
             "type": 3,
+            "title": "gitlab",
+            "name": "gitlab",
+            "description": "The One DevOps Platform",
+            "note": "Website: <a href='https://hub.docker.com/r/gitlab/gitlab-ce' target='_blank' rel='noopener'>Gitlab</a>",
+            "categories": [
+                "SelfHosted",
+                "Developer",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/gitlab.png",
+            "repository": {
+                "stackfile": "composes-files/gitlab.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "gitlab"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Grafana",
             "name": "Grafana",
             "description": "From heatmaps to histograms, graphs to geomaps: fast and furious visualizations any way you want.",

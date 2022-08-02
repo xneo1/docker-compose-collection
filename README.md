@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/xneo1">
-    <img src="https://zupimages.net/up/20/04/7vtd.png" width="140px" alt="xneo1" />
+    <img src="https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/Anchor2.png" width="140px" alt="xneo1" />
   </a>
 </p>
 
@@ -37,7 +37,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 
 ## List of services availables:
-<img src="https://img.shields.io/badge/Avaibles:_76-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
+<img src="https://img.shields.io/badge/Avaibles:_77-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
@@ -63,6 +63,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://www.filebot.net/images/filebot.logo.svg" alt="filebot" width="20"/> [filebot](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/filebot.yml) | [filebot.net](https://www.filebot.net/) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://avatars.githubusercontent.com/u/35781395?s=200&v=4" alt="filebrowser" width="20"/> [filebrowser](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/filebrowser.yml) | [Github.com](https://github.com/filebrowser/filebrowser) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://framalibre.org/sites/default/files/leslogos/Logo%20FreshRSS.png" alt="freshrss" width="20"/> [freshrss](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/freshrss.yml) | [FreshRSS.org](https://freshrss.org/) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
+| ✅ | <img src="https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/gitlab.png" alt="gitlab" width="20"/> [gitlab](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/gitlab.yml) | [Gitlab](https://hub.docker.com/r/gitlab/gitlab-ce) | 2022-08-02 |  Vagelis Fragkos |
 | ✅ | <img src="https://seeklogo.com/images/G/grafana-logo-15BA0AFA8A-seeklogo.com.png" alt="grafana" width="20"/> [grafana](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/grafana.yml) | [Grafana.com](https://grafana.com/grafana/dashboards/) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://progsoft.net/images/hastebin-icon-b45e3f5695d3f577b2630648bd00584195822e3d.png" alt="hastebin" width="20"/> [hastebin](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/hastebin.yml) | [Hastebin.com](https://hastebin.com/about.md) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://progsoft.net/images/hastebin-icon-b45e3f5695d3f577b2630648bd00584195822e3d.png" alt="hasty-paste" width="20"/> [hasty-paste](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/hasty-paste.yml) | [Hastebin.com](https://hastebin.com/about.md) | 2022-05-10 |  Vagelis Fragkos (Xneo1) |
@@ -119,7 +120,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://juliebarbaroux.tech/wp-content/uploads/2020/11/zabbix.png" alt="zabbix" width="20"/> [zabbix](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/zabbix.yml) | [Zabbix.com](https://www.zabbix.com/) | 2022-05-11 |  Mickael "PAPAMICA" Asseline |
 
 ## List of services to do:
-<img src="https://img.shields.io/badge/To_do:_188-%23FF8800.svg?style=for-the-badge&logo=vlcmediaplayer&logoColor=white">
+<img src="https://img.shields.io/badge/To_do:_187-%23FF8800.svg?style=for-the-badge&logo=vlcmediaplayer&logoColor=white">
 
 | Status | Service |
 |:--:|--|
