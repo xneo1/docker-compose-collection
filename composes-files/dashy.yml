@@ -1,18 +1,17 @@
-# Maintainer: Mickael "PAPAMICA" Asseline
-# Update: 2022-05-23
-
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-02
 
 #& type: 3
 #& title: Dashy
 #& description: Personnal dashboard
 #& note: Website: <a href='https://dashy.to/' target='_blank' rel='noopener'>Dashy.to</a>
-#& categories: SelfHosted, PAPAMICA
+#& categories: SelfHosted, xneo1
 #& platform: linux
 #& logo: https://camo.githubusercontent.com/6c0964f4604a6807c263c83fff293258a908bdff7587910976d11c4e67a589bb/68747470733a2f2f692e6962622e636f2f796862743643592f64617368792e706e67
 
 #% SERVICE: Name of the service (No spaces or points) [dashy]
-#% DATA_LOCATION: Data localization (Example: /apps/service) [/_data/apps]
-#% URL: Service URL (Example: service.papamica.fr or service.com)
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 
 # Work with Portainer
@@ -23,8 +22,10 @@ services:
     container_name: $SERVICE
     volumes:
       - $DATA_LOCATION/$SERVICE/conf.yml:/app/public/conf.yml
+    ports:
+      - 4000:80
     environment:
- #     - NODE_ENV=production
+      - NODE_ENV=production
       - UID=1000
       - GID=1000
     restart: unless-stopped
@@ -37,7 +38,7 @@ services:
     networks:
       - default
     labels:
-      - "autoupdate=monitor" # https://github.com/PAPAMICA/container-updater
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
       - "traefik.enable=true"
       - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
       - "traefik.http.routers.$SERVICE.tls=true"
