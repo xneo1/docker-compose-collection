@@ -10,7 +10,7 @@
 #& logo: https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/gitlab.png
 
 #% SERVICE: Name of the service (No spaces or points) [gitlab]
-#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config/]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
 #% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 
