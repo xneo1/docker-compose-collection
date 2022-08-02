@@ -25,7 +25,7 @@ services:
     container_name: $SERVICE
     restart: always
     volumes:
-      - $DATA_LOCATION/$SERVICE/config:/config
+      - $DATA_LOCATION/$SERVICE/config/:/config
       - $FOLDER_MOVIES:/movies
       - $FOLDER_SERIES:/series
     environment:
