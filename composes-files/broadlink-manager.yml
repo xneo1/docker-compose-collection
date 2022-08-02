@@ -7,7 +7,7 @@
 #& note: Website: <a href='https://hub.docker.com/r/techblog/broadlinkmanager' target='_blank' rel='noopener'>Broadlink-manager</a>
 #& categories: SelfHosted, Smart Home, xneo1
 #& platform: linux
-#& logo: 
+#& logo: https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/broadlink.png
 
 #% SERVICE: Name of the service (No spaces or points) [aria2-pro]
 #% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config/]
