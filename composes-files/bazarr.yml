@@ -1,11 +1,11 @@
-# Maintainer: Mickael "PAPAMICA" Asseline
-# Update: 2022-05-17
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-02
 
 #& type: 3
 #& title: Bazarr
 #& description: Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.
 #& note: Website: <a href='https://www.bazarr.media/' target='_blank' rel='noopener'>Bazarr.media</a>
-#& categories: SelfHosted, Mediacenter, PAPAMICA
+#& categories: SelfHosted, Mediacenter, xneo1
 #& platform: linux
 #& logo: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bazarr.png
 
@@ -14,8 +14,8 @@
 #% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 #% TZ: Time zone (Exemple: Europe/Athens) [Europe/Athens]
-#% FOLDER_MOVIES: Your movies folder (Exemple: /data/movies)
-#% FOLDER_SERIES: Your series folder (Exemple: /data/series)
+#% FOLDER_MOVIES: Your movies folder (Example: /portainer/Files/movies)
+#% FOLDER_SERIES: Your series folder (Example: /portainer/Files/series)
 
 
 # Work with Portainer
