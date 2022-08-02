@@ -49,7 +49,7 @@ services:
       - "traefik.docker.network=$NETWORK"
   gitlab-runner:
     image: gitlab/gitlab-runner:alpine
-    container_name: $SERVICE-runner
+    container_name: gitlab-runner
     restart: unless-stopped
     depends_on:
       - gitlab
