@@ -106,14 +106,14 @@
                 },
                 {
                     "name": "DATA_LOCATION",
-                    "label": "Data localization ",
+                    "label": "Data location ",
                     "description": "Example: /apps/service",
                     "default": "/portainer/Files/AppData/Config/"
                 },
                 {
                     "name": "URL",
                     "label": "Service URL",
-                    "description": "Example: or service.com"
+                    "description": "Example: service.com"
                 },
                 {
                     "name": "NETWORK",
