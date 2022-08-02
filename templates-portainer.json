@@ -446,11 +446,12 @@
             "type": 3,
             "title": "Dashy",
             "name": "Dashy",
-            "description": "Personnal dashboard",
+            "description": "Helps you organize your self-hosted services by making them accessible from a single place.",
             "note": "Website: <a href='https://dashy.to/' target='_blank' rel='noopener'>Dashy.to</a>",
             "categories": [
                 "SelfHosted",
-                "PAPAMICA"
+                "Dashboard",
+                "xneo1"
             ],
             "platform": "linux",
             "logo": "https://camo.githubusercontent.com/6c0964f4604a6807c263c83fff293258a908bdff7587910976d11c4e67a589bb/68747470733a2f2f692e6962622e636f2f796862743643592f64617368792e706e67",
@@ -467,14 +468,14 @@
                 },
                 {
                     "name": "DATA_LOCATION",
-                    "label": "Data localization ",
+                    "label": "Data location ",
                     "description": "Example: /apps/service",
-                    "default": "/_data/apps"
+                    "default": "/portainer/Files/AppData/Config"
                 },
                 {
                     "name": "URL",
                     "label": "Service URL",
-                    "description": "Example: service.papamica.fr or service.com"
+                    "description": "Example: service.com"
                 },
                 {
                     "name": "NETWORK",
