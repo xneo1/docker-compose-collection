@@ -7,7 +7,7 @@
 #& note: Website: <a href='https://github.com/P3TERX/Aria2-Pro-Core/blob/master/README.md' target='_blank' rel='noopener'>Aria2Pro</a>
 #& categories: SelfHosted, Downloading, xneo1
 #& platform: linux
-#& logo: 
+#& logo: https://seeklogo.com/images/A/Aria_Pro_II-logo-6937ED8402-seeklogo.com.png
 
 #% SERVICE: Name of the service (No spaces or points) [aria2-pro]
 #% DATA_LOCATION: Data localization (Example: /apps/service) [/portainer/Files/AppData/Config/]
@@ -20,7 +20,7 @@ version: "3.8"
 
 services:
 
-  Aria2-Pro:
+  aria2pro:
     container_name: aria2-pro
     image: p3terx/aria2-pro
     environment:
