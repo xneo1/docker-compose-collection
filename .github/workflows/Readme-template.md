@@ -104,7 +104,7 @@ If you want to add a new docker-compose, you must use the following template:
 #& logo: https://progsoft.net/images/hastebin-icon-b45e3f5695d3f577b2630648bd00584195822e3d.png
 
 #% SERVICE: Name of the service (No spaces or points) [hastebin]
-#% DATA_LOCATION: Data localization (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
 #% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 
