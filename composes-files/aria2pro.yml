@@ -72,3 +72,8 @@ services:
       driver: json-file
       options:
         max-size: 1m
+
+networks:
+  default:
+    external:
+      name: $NETWORK
