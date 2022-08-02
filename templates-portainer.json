@@ -1149,6 +1149,48 @@
         },
         {
             "type": 3,
+            "title": "Hastebin",
+            "name": "Hastebin",
+            "description": "Share your code easily",
+            "note": "Website: <a href='https://hastebin.com/about.md' target='_blank' rel='noopener'>Hastebin.com</a>",
+            "categories": [
+                "SelfHosted",
+                "PAPAMICA"
+            ],
+            "platform": "linux",
+            "logo": "https://progsoft.net/images/hastebin-icon-b45e3f5695d3f577b2630648bd00584195822e3d.png",
+            "repository": {
+                "stackfile": "composes-files/hasty-paste.yml",
+                "url": "https://github.com/PAPAMICA/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "hasty-paste"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "portainer/Files/AppData/Config/"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Healthchecks",
             "name": "Healthchecks",
             "description": "Healthchecks is a watchdog for your cron jobs. It's a web server that listens for pings from your cron jobs, plus a web interface.",
