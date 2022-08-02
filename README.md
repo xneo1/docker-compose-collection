@@ -352,10 +352,12 @@ sudo docker-compose -f service.yml --env-file env up -d
 
 ---
 # Add new docker-compose file
+
 I automated the creation of the json template file for Portainer and the update of the README.md.
 
 If you want to add a new docker-compose, you must use the following template:
-
+<details>
+<summary>
 ```yaml
 # Maintainer: Vagelis Fragkos (xneo1)
 # Update: 2022-08-02
@@ -406,3 +408,5 @@ networks:
     external:
       name: $NETWORK
 ```
+</summary>
+</details>
