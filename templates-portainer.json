@@ -300,13 +300,15 @@
                 },
                 {
                     "name": "FOLDER_MOVIES",
-                    "label": "Your movies folder",
-                    "description": "Example: /portainer/Files/movies"
+                    "label": "Your movies folder ",
+                    "description": "Example: /portainer/Files/movies",
+                    "default": "/portainer/Files/movies"
                 },
                 {
                     "name": "FOLDER_SERIES",
-                    "label": "Your series folder",
-                    "description": "Example: /portainer/Files/series"
+                    "label": "Your series folder ",
+                    "description": "Example: /portainer/Files/series",
+                    "default": "/portainer/Files/series"
                 }
             ]
         },
