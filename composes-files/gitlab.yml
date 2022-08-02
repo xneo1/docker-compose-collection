@@ -49,14 +49,14 @@ services:
       - "traefik.docker.network=$NETWORK"
   gitlab-runner:
     image: gitlab/gitlab-runner:alpine
-    container_name: '$SERVICE'-runner
+    container_name: $SERVICE-runner
     restart: unless-stopped
     depends_on:
       - gitlab
     volumes:
       - $DATA_LOCATION/$SERVICE/config-runner:/etc/gitlab-runner
       - /var/run/docker.sock:/var/run/docker.sock
-     networks:
+    networks:
       - default
       - gitlab
 
