@@ -25,8 +25,8 @@ services:
     environment:
       STORAGE_TYPE: file
     ports:
-      - '7680:80'
-      - '7643:443'
+      - 7680:80
+      - 7643:443
     volumes:
       - $DATA_LOCATION/$SERVICE/data:/var/opt/gitlab
       - $DATA_LOCATION/$SERVICE/logs:/var/log/gitlab
