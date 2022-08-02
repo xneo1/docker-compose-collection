@@ -144,5 +144,5 @@ networks:
     external:
       name: $NETWORK
 ```
-  </summary>
+</summary>
 </details>
