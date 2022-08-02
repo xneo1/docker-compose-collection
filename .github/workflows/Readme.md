@@ -59,7 +59,7 @@ Add this URL in Portainer:
 https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/templates-portainer.json
 ```
 
-![PORTAINER](https://i.imgur.com/M49ssCN.png)
+![PORTAINER](https://github.com/xneo1/docker-compose-collection/blob/master/img/xneo1-docker-compose-collection2.jpg)
 
 ## Debian
 Install Git :
