@@ -4,7 +4,7 @@
 #& type: 3
 #& title: gitlab
 #& description: The One DevOps Platform
-#& note: Website: <a href='https://hub.docker.com/r/gitlab/gitlab-ce' target='_blank' rel='noopener'>Broadlink-manager</a>
+#& note: Website: <a href='https://hub.docker.com/r/gitlab/gitlab-ce' target='_blank' rel='noopener'>Gitlab</a>
 #& categories: SelfHosted, Developer, xneo1
 #& platform: linux
 #& logo: https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/gitlab.png
