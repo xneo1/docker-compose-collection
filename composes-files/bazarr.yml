@@ -10,7 +10,7 @@
 #& logo: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/bazarr.png
 
 #% SERVICE: Name of the service (No spaces or points) [bazarr]
-#% DATA_LOCATION: Data localization (Example: /apps/service) [/_data/apps]
+#% DATA_LOCATION: Data localization (Example: /apps/service) [/portainer/Files/AppData/Configs]
 #% URL: Service URL (Example: service.papamica.fr or service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 #% TZ: Time zone (Exemple: Europe/Paris) [Europe/Paris]
