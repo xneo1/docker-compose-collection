@@ -277,14 +277,14 @@
                 },
                 {
                     "name": "DATA_LOCATION",
-                    "label": "Data localization ",
+                    "label": "Data location ",
                     "description": "Example: /apps/service",
                     "default": "/portainer/Files/AppData/Configs"
                 },
                 {
                     "name": "URL",
                     "label": "Service URL",
-                    "description": "Example: service.papamica.fr or service.com"
+                    "description": "Example: service.com"
                 },
                 {
                     "name": "NETWORK",
@@ -295,8 +295,8 @@
                 {
                     "name": "TZ",
                     "label": "Time zone ",
-                    "description": "Exemple: Europe/Paris",
-                    "default": "Europe/Paris"
+                    "description": "Exemple: Europe/Athens",
+                    "default": "Europe/Athens"
                 },
                 {
                     "name": "FOLDER_MOVIES",
