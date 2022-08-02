@@ -14,8 +14,8 @@
 #% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 #% TZ: Time zone (Exemple: Europe/Athens) [Europe/Athens]
-#% FOLDER_MOVIES: Your movies folder (Example: /portainer/Files/movies)
-#% FOLDER_SERIES: Your series folder (Example: /portainer/Files/series)
+#% FOLDER_MOVIES: Your movies folder (Example: /portainer/Files/movies) [/portainer/Files/movies]
+#% FOLDER_SERIES: Your series folder (Example: /portainer/Files/series) [/portainer/Files/series]
 
 
 # Work with Portainer
