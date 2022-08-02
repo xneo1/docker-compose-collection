@@ -397,7 +397,7 @@
                     "name": "SERVICE",
                     "label": "Name of the service ",
                     "description": "No spaces or points",
-                    "default": "aria2-pro"
+                    "default": "broadlinkmanager"
                 },
                 {
                     "name": "DATA_LOCATION",
