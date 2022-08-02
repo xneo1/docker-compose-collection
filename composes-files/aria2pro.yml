@@ -10,8 +10,8 @@
 #& logo: https://seeklogo.com/images/A/Aria_Pro_II-logo-6937ED8402-seeklogo.com.png
 
 #% SERVICE: Name of the service (No spaces or points) [aria2-pro]
-#% DATA_LOCATION: Data localization (Example: /apps/service) [/portainer/Files/AppData/Config/]
-#% URL: Service URL (Example: or service.com)
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config/]
+#% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 
 # Work with Portainer
