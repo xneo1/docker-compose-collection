@@ -41,7 +41,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
-| ✅ | <img src="https://git.spip.net/repo-avatars/1417-1f8a32370f4028c9c0c216787ad4916c" alt="adminer" width="20"/> [adminer](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/adminer.yml) | [Adminer.org](https://www.adminer.org/) | 2022-05-10 |  Mickael "xneo1" Asseline |
+| ✅ | <img src="https://git.spip.net/repo-avatars/1417-1f8a32370f4028c9c0c216787ad4916c" alt="adminer" width="20"/> [adminer](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/adminer.yml) | [Adminer.org](https://www.adminer.org/) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/a22d9206f80dfbb10748b6764fee932ff0ae1a8f/687474703a2f2f7265706f2e6e75787265662e636f6d2f7075622f696d672f6c6f676f2d617070726973652e706e67" alt="apprise-api" width="20"/> [apprise-api](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/apprise-api.yml) | [Github.com](https://github.com/caronc/apprise-api) | 2022-05-13 |  Mickael "xneo1" Asseline |
 | ✅ | <img src="https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/audacity-logo.png" alt="audacity" width="20"/> [audacity](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/audacity.yml) | [audacityTeam.org](https://www.audacityteam.org/ ) | 2022-05-17 |  Mickael "xneo1" Asseline |
 | ✅ | <img src="https://cdn-icons-png.flaticon.com/512/4773/4773193.png" alt="autoheal" width="20"/> [autoheal](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/autoheal.yml) | [Github.com](https://github.com/willfarrell/docker-autoheal) | 2022-05-28 |  Mickael "xneo1" Asseline |
@@ -354,7 +354,7 @@ sudo docker-compose -f service.yml --env-file env up -d
 
 If you want to add a new docker-compose, you must use the following template:
 ```yaml
-# Maintainer: Mickael "xneo1" Asseline
+# Maintainer: Mickael "PAPAMICA" Asseline
 # Update: 2022-05-10
 
 #& type: 3
