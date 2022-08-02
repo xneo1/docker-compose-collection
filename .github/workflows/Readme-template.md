@@ -92,8 +92,8 @@ I automated the creation of the json template file for Portainer and the update 
 
 If you want to add a new docker-compose, you must use the following template:
 ```yaml
-# Maintainer: Mickael "xneo1" Asseline
-# Update: 2022-05-10
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-02
 
 #& type: 3
 #& title: Hastebin
