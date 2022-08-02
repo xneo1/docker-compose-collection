@@ -20,8 +20,10 @@ services:
   dashy:
     image: lissy93/dashy:latest
     container_name: $SERVICE
+    # Pass in your config file below, by specifying the path on your host machine
     volumes:
       - $DATA_LOCATION/$SERVICE/conf.yml:/app/public/conf.yml
+      - $DATA_LOCATION/$SERVICE/icons:/app/public/item-icons/icons
     ports:
       - 4000:80
     environment:
