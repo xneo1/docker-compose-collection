@@ -162,7 +162,6 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | 🚸 | ghost |
 | 🚸 | gitea |
 | 🚸 | github_pages |
-| 🚸 | gitlab |
 | 🚸 | gogs |
 | 🚸 | gotify |
 | 🚸 | grav |
