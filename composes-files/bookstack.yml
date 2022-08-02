@@ -5,18 +5,18 @@
 #& title: Bookstack
 #& description: Wiki selfhosted
 #& note: Website: <a href='https://www.bookstackapp.com/' target='_blank' rel='noopener'>Bookstackapp.com</a>
-#& categories: SelfHosted, PAPAMICA
+#& categories: SelfHosted, Wiki, xneo1
 #& platform: linux
 #& logo: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/BookStack_logo.svg/1075px-BookStack_logo.svg.png
 
 #% SERVICE: Name of the service (No spaces or points) [bookstack]
-#% DATA_LOCATION: data localization (Example: /apps/service) [/_data/apps]
-#% URL: Service URL (Example: service.papamica.fr or service.com)
+#% DATA_LOCATION: data localization (Example: /apps/service) [/portainer/Files/AppData/Configs]
+#% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 #% DB_USER: Database user (No spaces or points) [bookstack]
 #% DB_PASSWORD: Database user password
 #% DB_ROOT: Database root password
-#% TIME_ZONE: Time zone (Example : Europe/Paris) [Europe/Paris]
+#% TIME_ZONE: Time zone (Example : Europe/Athens) [Europe/Athens]
 
 # Work with Portainer
 version: "2"
