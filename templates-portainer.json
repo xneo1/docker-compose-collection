@@ -1592,6 +1592,49 @@
         },
         {
             "type": 3,
+            "title": "jump",
+            "name": "jump",
+            "description": "Jump is yet another self-hosted startpage for your server designed to be simple, stylish, fast and secure.",
+            "note": "Website: <a href='https://github.com/daledavies/jump/blob/main/README.md' target='_blank' rel='noopener'>Jump</a>",
+            "categories": [
+                "SelfHosted",
+                "Dashboard",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://github.com/daledavies/jump/raw/main/screenshots/screenshot-demo.webp",
+            "repository": {
+                "stackfile": "composes-files/jump.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "jump"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Keycloak",
             "name": "Keycloak",
             "description": " Add authentication to applications and secure services with minimum effort.",

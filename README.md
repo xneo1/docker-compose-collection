@@ -37,7 +37,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 
 ## List of services availables:
-<img src="https://img.shields.io/badge/Avaibles:_77-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
+<img src="https://img.shields.io/badge/Avaibles:_78-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
@@ -72,6 +72,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://user-images.githubusercontent.com/27040483/28728094-99f3e3f6-73c7-11e7-8f8d-28912dc6ac0d.png" alt="jackett" width="20"/> [jackett](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/jackett.yml) | [Gitub.com](https://github.com/Jackett/Jackett) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://developer.asustor.com/uploadIcons/0020_999_1568614440_Jellyfin_256.png" alt="jellyfin" width="20"/> [jellyfin](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/jellyfin.yml) | [Jellyfin.org](https://jellyfin.org/) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://api.cloudron.io/api/v1/apps/net.jirafeau.cloudronapp/versions/1.2.0/icon" alt="jirafeau" width="20"/> [jirafeau](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/jirafeau.yml) | [Gitlab.com](https://gitlab.com/mojo42/Jirafeau) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
+| ✅ | <img src="https://github.com/daledavies/jump/raw/main/screenshots/screenshot-demo.webp" alt="jump" width="20"/> [jump](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/jump.yml) | [Jump](https://github.com/daledavies/jump/blob/main/README.md) | 2022-08-02 |  Vagelis Fragkos (xneo1) |
 | ✅ | <img src="https://dyltqmyl993wv.cloudfront.net/assets/stacks/keycloak/img/keycloak-stack-220x234.png" alt="keycloak" width="20"/> [keycloak](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/keycloak.yml) | [Keycloak.org](https://www.keycloak.org/) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://github.com/lidarr/Lidarr/raw/develop/Logo/400.png" alt="lidarr" width="20"/> [lidarr](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/lidarr.yml) | [Lidarr.audio](https://lidarr.audio/) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Limesurvey_logo.png" alt="limesurvey" width="20"/> [limesurvey](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/limesurvey.yml) | [Github.com](https://github.com/LimeSurvey/LimeSurvey) | 2022-05-30 |  Mickael "PAPAMICA" Asseline |
