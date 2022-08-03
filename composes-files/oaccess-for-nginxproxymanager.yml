@@ -1,0 +1,57 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-02
+
+#& type: 3
+#& title: goaccess-for-nginxproxymanager
+#& description: GoAccess for Nginx Proxy Manager Logs
+#& note: Website: <a href='https://github.com/xavier-hernandez/goaccess-for-nginxproxymanager' target='_blank' rel='noopener'>goaccess-for-nginxproxymanager</a>
+#& categories: SelfHosted, Analytics, xneo1
+#& platform: linux
+#& logo: https://camo.githubusercontent.com/06cb6b943763a4bc54ee4dad2760efde7b1632ddf944015db28034eae0eb359b/68747470733a2f2f692e6962622e636f2f664e6a394463792f676f616363657373312e6a7067
+
+#% SERVICE: Name of the service (No spaces or points) [goaccess-for-nginxproxymanager]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "2.1"
+services:
+  # Goaccess-for-nginxproxymanager : https://github.com/xavier-hernandez/goaccess-for-nginxproxymanager
+  goaccess-for-nginxproxymanager:
+    image: xavierh/goaccess-for-nginxproxymanager:latest
+    container_name: $SERVICE
+    restart: always
+    environment:
+      STORAGE_TYPE: file
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Athens
+      - SKIP_ARCHIVED_LOGS=False #optional
+      - BASIC_AUTH=False #optional
+      - BASIC_AUTH_USERNAME=user #optional
+      - BASIC_AUTH_PASSWORD=pass #optional
+    volumes:
+      - $DATA_LOCATION/$SERVICE/data/logs:/opt/log
+    ports:
+      - 7880:7880
+    healthcheck:
+      test: wget -s 'http://localhost:7880'
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.entrypoints=https"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls=true"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.docker.network=$NETWORK"
+
+networks:
+  default:
+    external:
+      name: $NETWORK
