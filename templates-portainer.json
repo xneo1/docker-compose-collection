@@ -1235,6 +1235,49 @@
         },
         {
             "type": 3,
+            "title": "goaccess-for-nginxproxymanager",
+            "name": "goaccess-for-nginxproxymanager",
+            "description": "GoAccess for Nginx Proxy Manager Logs",
+            "note": "Website: <a href='https://github.com/xavier-hernandez/goaccess-for-nginxproxymanager' target='_blank' rel='noopener'>goaccess-for-nginxproxymanager</a>",
+            "categories": [
+                "SelfHosted",
+                "Analytics",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://camo.githubusercontent.com/06cb6b943763a4bc54ee4dad2760efde7b1632ddf944015db28034eae0eb359b/68747470733a2f2f692e6962622e636f2f664e6a394463792f676f616363657373312e6a7067",
+            "repository": {
+                "stackfile": "composes-files/goaccess-for-nginxproxymanager.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "goaccess-for-nginxproxymanager"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Grafana",
             "name": "Grafana",
             "description": "From heatmaps to histograms, graphs to geomaps: fast and furious visualizations any way you want.",
