@@ -54,7 +54,7 @@ services:
     image: henkel/bittorrent-tracker:latest
     command: ["npx", "bittorrent-tracker", "--http-hostname", "0.0.0.0", "--ws"]
     ports:
-    - 28000:8000    
+      - 28000:8000
 networks:
   default:
     external:
