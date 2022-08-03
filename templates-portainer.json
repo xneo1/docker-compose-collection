@@ -531,6 +531,50 @@
         },
         {
             "type": 3,
+            "title": "dashdot",
+            "name": "dashdot",
+            "description": "Dashdot is a modern server dashboard, running on the latest tech, designed with glassmorphism in mind. It is intended to be used for smaller VPS and private servers.",
+            "note": "Website: <a href='https://hub.docker.com/r/mauricenino/dashdot' target='_blank' rel='noopener'>Dashdot</a>",
+            "categories": [
+                "SelfHosted",
+                "AI",
+                "Face Recognition",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/MauriceNino/dashdot/main/.github/images/banner_muted.png",
+            "repository": {
+                "stackfile": "composes-files/dashdot.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "dashdot"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Dashy",
             "name": "Dashy",
             "description": "Helps you organize your self-hosted services by making them accessible from a single place.",

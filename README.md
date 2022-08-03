@@ -37,7 +37,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 
 ## List of services availables:
-<img src="https://img.shields.io/badge/Avaibles:_81-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
+<img src="https://img.shields.io/badge/Avaibles:_82-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
@@ -52,6 +52,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/BookStack_logo.svg/1075px-BookStack_logo.svg.png" alt="bookstack" width="20"/> [bookstack](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/bookstack.yml) | [Bookstackapp.com](https://www.bookstackapp.com/) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/broadlink.png" alt="broadlink-manager" width="20"/> [broadlink-manager](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/broadlink-manager.yml) | [Broadlink-manager](https://hub.docker.com/r/techblog/broadlinkmanager) | 2022-08-02 |  Vagelis Fragkos (xneo1) |
 | ✅ | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Cometohere_blue.svg/640px-Cometohere_blue.svg.png" alt="chevereto" width="20"/> [chevereto](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/chevereto.yml) | [Github.com](https://github.com/rodber/chevereto-free) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
+| ✅ | <img src="https://raw.githubusercontent.com/MauriceNino/dashdot/main/.github/images/banner_muted.png" alt="dashdot" width="20"/> [dashdot](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/dashdot.yml) | [Dashdot](https://hub.docker.com/r/mauricenino/dashdot) | 2022-08-03 |  Vagelis Fragkos (xneo1) |
 | ✅ | <img src="https://dashy.to/img/dashy.png" alt="dashy" width="20"/> [dashy](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/dashy.yml) | [Dashy.to](https://dashy.to/) | 2022-08-02 |  Vagelis Fragkos (xneo1) |
 | ✅ | <img src="https://avatars2.githubusercontent.com/u/6733935?v=3&s=200" alt="deluge" width="20"/> [deluge](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/deluge.yml) | [Deluge-Torrent.org](https://deluge-torrent.org/ ) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://d33wubrfki0l68.cloudfront.net/62334572e03c001939ed509a2a1f1009dd9bdde3/a7ee8/assets/images/tool-icons/dillinger.png" alt="dillinger" width="20"/> [dillinger](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/dillinger.yml) | [Github.com](https://github.com/joemccann/dillinger) | 2022-05-13 |  Mickael "PAPAMICA" Asseline |
