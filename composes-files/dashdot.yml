@@ -1,0 +1,56 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-03
+
+#& type: 3
+#& title: dashdot
+#& description: Dashdot is a modern server dashboard, running on the latest tech, designed with glassmorphism in mind. It is intended to be used for smaller VPS and private servers.
+#& note: Website: <a href='https://hub.docker.com/r/mauricenino/dashdot' target='_blank' rel='noopener'>Dashdot</a>
+#& categories: SelfHosted, AI, Face Recognition, xneo1
+#& platform: linux
+#& logo: https://raw.githubusercontent.com/MauriceNino/dashdot/main/.github/images/banner_muted.png
+
+#% SERVICE: Name of the service (No spaces or points) [dashdot]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "2.1"
+services:
+  # Dashdot : https://hub.docker.com/r/mauricenino/dashdot
+ dashdot
+    image: mauricenino/dashdot
+    container_name: $SERVICE
+    restart: unless-stopped
+    environment:
+      - DASHDOT_ENABLE_CPU_TEMPS=true
+      - DASHDOT_ENABLE_STORAGE_SPLIT_VIEW=true
+    volumes:
+      - /etc/os-release:/etc/os-release:ro
+      - /proc/1/ns/net:/mnt/host_ns_net:ro
+      - /:/mnt/host:ro
+      - $DATA_LOCATION/$SERVICE:/app
+    ports:
+      - 13000:3000 # view
+      - 13001:3001 # api
+      - 13002:3002 # docs
+    healthcheck:
+      test: wget -s 'http://localhost:13000'
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.entrypoints=https"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls=true"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.docker.network=$NETWORK"
+
+networks:
+  default:
+    external:
+      name: $NETWORK
