@@ -1,0 +1,49 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-03
+
+#& type: 3
+#& title: facebox
+#& description: With facebox you can do state of the art face recognition with a simple JSON/HTTP API, and interactive documentation.
+#& note: Website: <a href='https://machinebox.io' target='_blank' rel='noopener'>facebox</a>
+#& categories: SelfHosted, AI, Face Recognition, xneo1
+#& platform: linux
+#& logo: https://machinebox.io/assets/shared/static/img/machina.svg
+
+#% SERVICE: Name of the service (No spaces or points) [facebox]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "2.1"
+services:
+  # Facebox : 
+  facebox:
+    image: machinebox/facebox
+    container_name: $SERVICE
+    restart: unless-stopped
+    environment:
+      - MB_KEY=${MB_KEY}
+      - MB_FACEBOX_DISABLE_RECOGNITION=false
+    ports:
+      - 1080:8080
+    healthcheck:
+      test: wget -s 'http://localhost:1080'
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.entrypoints=https"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls=true"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.docker.network=$NETWORK"
+
+networks:
+  default:
+    external:
+      name: $NETWORK
