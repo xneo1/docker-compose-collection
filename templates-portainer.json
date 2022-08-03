@@ -1232,6 +1232,49 @@
         },
         {
             "type": 3,
+            "title": "filepizza",
+            "name": "filepizza",
+            "description": "Peer-to-peer file transfers in your browser",
+            "note": "Website: <a href='https://github.com/kern/filepizza' target='_blank' rel='noopener'>Filepizza</a>",
+            "categories": [
+                "SelfHosted",
+                "Downloading",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://raw.githubusercontent.com/kern/filepizza/master/src/static/images/wordmark.png",
+            "repository": {
+                "stackfile": "composes-files/filepizza.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "filepizza"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "FreshRSS",
             "name": "FreshRSS",
             "description": "Freshrss is a free, self-hostable aggregator for rss feeds.",
