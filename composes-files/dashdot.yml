@@ -18,7 +18,7 @@
 version: "2.1"
 services:
   # Dashdot : https://hub.docker.com/r/mauricenino/dashdot
- dashdot
+  dashdot:
     image: mauricenino/dashdot
     container_name: $SERVICE
     restart: unless-stopped
