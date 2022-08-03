@@ -1,0 +1,51 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-02
+
+#& type: 3
+#& title: baserow
+#& description: Create your own online database without technical experience.
+#& note: Website: <a href='https://baserow.io' target='_blank' rel='noopener'>Baserow</a>
+#& categories: SelfHosted, Productivity, Database, xneo1
+#& platform: linux
+#& logo: https://baserow.io/_nuxt/img/logo.1421f77.svg
+
+#% SERVICE: Name of the service (No spaces or points) [baserow]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "2"
+services:
+  # Baserow : https://github.com/bram2w/baserow/blob/master/README.md
+  baserow:
+    image: baserow/baserow
+    container_name: $SERVICE
+    restart: always
+    environment:
+      STORAGE_TYPE: file
+    volumes:
+      - $DATA_LOCATION/$SERVICE:/baserow/data
+    ports:
+      - 280:80  #changed from default 80
+      - 2443:443  
+    healthcheck:
+      test: wget -s 'http://localhost:280'
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.entrypoints=https"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls=true"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.docker.network=$NETWORK"
+
+networks:
+  default:
+    external:
+      name: $NETWORK
