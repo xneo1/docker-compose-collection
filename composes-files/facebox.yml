@@ -17,7 +17,7 @@
 # Work with Portainer
 version: "2.1"
 services:
-  # Facebox : 
+  # Facebox : https://machinebox.io/docs/facebox
   facebox:
     image: machinebox/facebox
     container_name: $SERVICE
