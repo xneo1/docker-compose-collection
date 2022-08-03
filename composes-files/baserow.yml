@@ -28,7 +28,7 @@ services:
       - $DATA_LOCATION/$SERVICE:/baserow/data
     ports:
       - 280:80  #changed from default 80
-      - 2443:443  
+      - 2443:443
     healthcheck:
       test: wget -s 'http://localhost:280'
       interval: 1m
