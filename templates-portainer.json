@@ -984,6 +984,50 @@
         },
         {
             "type": 3,
+            "title": "facebox",
+            "name": "facebox",
+            "description": "With facebox you can do state of the art face recognition with a simple JSON/HTTP API, and interactive documentation.",
+            "note": "Website: <a href='https://machinebox.io' target='_blank' rel='noopener'>facebox</a>",
+            "categories": [
+                "SelfHosted",
+                "AI",
+                "Face Recognition",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://machinebox.io/assets/shared/static/img/machina.svg",
+            "repository": {
+                "stackfile": "composes-files/facebox.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "facebox"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Ferdi",
             "name": "Ferdi",
             "description": "Centralize your apps in one app",
