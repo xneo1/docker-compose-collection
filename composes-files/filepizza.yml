@@ -1,0 +1,61 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-08-03
+
+#& type: 3
+#& title: filepizza
+#& description: Peer-to-peer file transfers in your browser
+#& note: Website: <a href='https://github.com/kern/filepizza' target='_blank' rel='noopener'>Filepizza</a>
+#& categories: SelfHosted, Downloading, xneo1
+#& platform: linux
+#& logo: https://raw.githubusercontent.com/kern/filepizza/master/src/static/images/wordmark.png
+
+#% SERVICE: Name of the service (No spaces or points) [filepizza]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "2.1"
+services:
+  # Filepizza : https://github.com/kern/filepizza/blob/master/README.md
+  filepizza:
+    image: kern/filepizza:latest
+    container_name: $SERVICE
+    restart: unless-stopped
+    build:
+      context: .
+    ports:
+      - 3333:3333
+    environment:
+      - PORT=3333
+      - EXTRA_ICE_SERVERS=turn:localhost:3478
+      - WEBTORRENT_TRACKERS=ws://localhost:28000
+    healthcheck:
+      test: wget -s 'http://localhost:3333'
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.entrypoints=https"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls=true"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.docker.network=$NETWORK"
+  coturn:
+    image: instrumentisto/coturn:latest
+    network_mode: host
+    ports:
+      - 3478:3478
+  bittorrent-tracker:
+    image: henkel/bittorrent-tracker:latest
+    command: ["npx", "bittorrent-tracker", "--http-hostname", "0.0.0.0", "--ws"]
+    ports:
+    - 28000:8000    
+networks:
+  default:
+    external:
+      name: $NETWORK
