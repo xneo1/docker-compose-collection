@@ -253,6 +253,50 @@
         },
         {
             "type": 3,
+            "title": "baserow",
+            "name": "baserow",
+            "description": "Create your own online database without technical experience.",
+            "note": "Website: <a href='https://baserow.io' target='_blank' rel='noopener'>Baserow</a>",
+            "categories": [
+                "SelfHosted",
+                "Productivity",
+                "Database",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://baserow.io/_nuxt/img/logo.1421f77.svg",
+            "repository": {
+                "stackfile": "composes-files/baserow.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "baserow"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Bazarr",
             "name": "Bazarr",
             "description": "Bazarr is a companion application to Sonarr and Radarr that manages and downloads subtitles based on your requirements.",
