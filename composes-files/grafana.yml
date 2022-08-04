@@ -27,7 +27,7 @@ services:
     volumes:
       - $DATA_LOCATION/$SERVICE/config:/etc/grafana
       - $DATA_LOCATION/$SERVICE/data:/var/lib/grafana
-    user: "$UID:$GID"  
+    user: "$UID:$GID"
     environment:
       - GF_PANELS_DISABLE_SANITIZE_HTML=true
       - GF_SERVER_DOMAIN=$URL
