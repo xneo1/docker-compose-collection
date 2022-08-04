@@ -1,18 +1,18 @@
-# Maintainer: Mickael "PAPAMICA" Asseline
-# Update: 2022-05-10
+# Maintainer: Vagelis Fragkos
+# Update: 2022-08-03
 
 #& type: 3
 #& title: Grafana
 #& description: From heatmaps to histograms, graphs to geomaps: fast and furious visualizations any way you want.
 #& note: Website: <a href='https://grafana.com/grafana/dashboards/' target='_blank' rel='noopener'>Grafana.com</a>
-#& categories: SelfHosted, Monitoring, PAPAMICA
+#& categories: SelfHosted, Monitoring, xneo1
 #& platform: linux
 #& logo: https://seeklogo.com/images/G/grafana-logo-15BA0AFA8A-seeklogo.com.png
 
 #% SERVICE: Name of the service (No spaces or points) [grafana]
-#% DATA_LOCATION: Data localization (Example: /apps/service) [/_data/apps]
+#% DATA_LOCATION: Data localization (Example: /apps/service) [/portainer/Files/AppData/Config]
 #% PLUGINS: Plugins to install (Example: grafana-singlestat-panel) [alexanderzobnin-zabbix-app,grafana-singlestat-panel]
-#% URL: Service URL (Example: service.papamica.fr or service.com)
+#% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 
 # Work with Portainer
@@ -39,7 +39,7 @@ services:
     networks:
       - default
     labels:
-      - "autoupdate=monitor" # https://github.com/PAPAMICA/container-updater
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
       - "traefik.enable=true"
       - "traefik.http.routers.$SERVICE.entrypoints=https"
       - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
