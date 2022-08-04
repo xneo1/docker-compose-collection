@@ -1416,7 +1416,7 @@
             "categories": [
                 "SelfHosted",
                 "Monitoring",
-                "PAPAMICA"
+                "xneo1"
             ],
             "platform": "linux",
             "logo": "https://seeklogo.com/images/G/grafana-logo-15BA0AFA8A-seeklogo.com.png",
@@ -1435,7 +1435,7 @@
                     "name": "DATA_LOCATION",
                     "label": "Data localization ",
                     "description": "Example: /apps/service",
-                    "default": "/_data/apps"
+                    "default": "/portainer/Files/AppData/Config"
                 },
                 {
                     "name": "PLUGINS",
@@ -1446,7 +1446,7 @@
                 {
                     "name": "URL",
                     "label": "Service URL",
-                    "description": "Example: service.papamica.fr or service.com"
+                    "description": "Example: service.com"
                 },
                 {
                     "name": "NETWORK",
