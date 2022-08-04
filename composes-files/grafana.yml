@@ -22,9 +22,12 @@ services:
     image: grafana/grafana:latest
     restart: always
     container_name: $SERVICE
+    ports:
+      - 3000:3000
     volumes:
       - $DATA_LOCATION/$SERVICE/config:/etc/grafana
       - $DATA_LOCATION/$SERVICE/data:/var/lib/grafana
+    user: "$UID:$GID"  
     environment:
       - GF_PANELS_DISABLE_SANITIZE_HTML=true
       - GF_SERVER_DOMAIN=$URL
