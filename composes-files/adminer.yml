@@ -1,17 +1,17 @@
-# Maintainer: Mickael "PAPAMICA" Asseline
-# Update: 2022-05-10
+# Maintainer: Vagelis Fragkos
+# Update: 2022-08-05
 
 
 #& type: 3
 #& title: Adminer
-#& description: Managment of MySQL
+#& description: Management of MySQL
 #& note: Website: <a href='https://www.adminer.org/' target='_blank' rel='noopener'>Adminer.org</a>
 #& categories: SelfHosted, Database, PAPAMICA
 #& platform: linux
 #& logo: https://git.spip.net/repo-avatars/1417-1f8a32370f4028c9c0c216787ad4916c
 
 #% SERVICE: Name of the service (No spaces or points) [adminer]
-#% URL: Service URL (Example: service.papamica.fr or service.com)
+#% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 
 # Work with Portainer
@@ -24,7 +24,7 @@ services:
     environment:
       - ADMINER_DESIGN='hydra'
     healthcheck:
-      test: curl --fail http://localhost:8080 || exit 1
+      test: curl --fail http://localhost:38080 || exit 1
       interval: 1m
       timeout: 30s
       retries: 3
@@ -35,7 +35,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
       - "traefik.http.routers.$SERVICE.tls.certresolver=http"
-      - "traefik.http.services.$SERVICE.loadbalancer.server.port=8080"
+      - "traefik.http.services.$SERVICE.loadbalancer.server.port=38080"
       - "traefik.docker.network=$NETWORK"
 networks:
   default:
