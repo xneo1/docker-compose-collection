@@ -37,7 +37,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 
 ## List of services availables:
-<img src="https://img.shields.io/badge/Avaibles:_83-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
+<img src="https://img.shields.io/badge/Avaibles:_84-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
@@ -66,6 +66,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://www.filebot.net/images/filebot.logo.svg" alt="filebot" width="20"/> [filebot](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/filebot.yml) | [filebot.net](https://www.filebot.net/) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://avatars.githubusercontent.com/u/35781395?s=200&v=4" alt="filebrowser" width="20"/> [filebrowser](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/filebrowser.yml) | [Github.com](https://github.com/filebrowser/filebrowser) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://raw.githubusercontent.com/kern/filepizza/master/src/static/images/wordmark.png" alt="filepizza" width="20"/> [filepizza](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/filepizza.yml) | [Filepizza](https://github.com/kern/filepizza) | 2022-08-03 |  Vagelis Fragkos (xneo1) |
+| ✅ | <img src="https://github.com/ShaneIsrael/fireshare/raw/main/app/client/src/assets/logo.png" alt="fireshare" width="20"/> [fireshare](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/fireshare.yml) | [Github.com](https://github.com/ShaneIsrael/fireshare) | 2022-09-22 |  Vagelis Fragkos |
 | ✅ | <img src="https://framalibre.org/sites/default/files/leslogos/Logo%20FreshRSS.png" alt="freshrss" width="20"/> [freshrss](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/freshrss.yml) | [FreshRSS.org](https://freshrss.org/) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://raw.githubusercontent.com/xneo1/docker-compose-collection/master/img/gitlab.png" alt="gitlab" width="20"/> [gitlab](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/gitlab.yml) | [Gitlab](https://hub.docker.com/r/gitlab/gitlab-ce) | 2022-08-02 |  Vagelis Fragkos |
 | ✅ | <img src="https://camo.githubusercontent.com/06cb6b943763a4bc54ee4dad2760efde7b1632ddf944015db28034eae0eb359b/68747470733a2f2f692e6962622e636f2f664e6a394463792f676f616363657373312e6a7067" alt="goaccess-for-nginxproxymanager" width="20"/> [goaccess-for-nginxproxymanager](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/goaccess-for-nginxproxymanager.yml) | [goaccess-for-nginxproxymanager](https://github.com/xavier-hernandez/goaccess-for-nginxproxymanager) | 2022-08-02 |  Vagelis Fragkos (xneo1) |
