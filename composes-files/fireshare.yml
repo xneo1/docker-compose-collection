@@ -1,0 +1,54 @@
+# Maintainer: Vagelis Fragkos
+# Update: 2022-09-22
+
+
+#& type: 3
+#& title: Fireshare
+#& description: Share your game clips, videos, or other media via unique links.
+#& note: Website: <a href='https://github.com/ShaneIsrael/fireshare' target='_blank' rel='noopener'>Github.com</a>
+#& categories: Multimedia, Videos, xneo1
+#& platform: linux
+#& logo: https://github.com/ShaneIsrael/fireshare/raw/main/app/client/src/assets/logo.png
+
+#% SERVICE: Name of the service (No spaces or points) [fireshare]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "3"
+services:
+  fireshare:
+    image: shaneisrael/fireshare:latest
+    restart: unless-stopped
+    container_name: $SERVICE
+    ports:
+      - "8888:80"
+    volumes:
+      - /portainer/Files/AppData/Config/fireshare/data:/data
+      - /portainer/Files/AppData/Config/fireshare/processed:/processed
+      - /portainer/Files/AppData/Config/fireshare/videos:/videos
+    environment:
+      - ADMIN_USERNAME=fireadmin
+      - ADMIN_PASSWORD=firepwd #please change this
+      - SECRET_KEY=replace_this_with_some_random_string0x0
+      - MINUTES_BETWEEN_VIDEO_SCANS=1  #how often should the system scan?
+      - PUID=998 #change this to match your server settings
+      - PGID=100 #change this to match your server settings
+    healthcheck:
+      test: curl --fail http://localhost:8888 || exit 1
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.http.services.$SERVICE.loadbalancer.server.port=8888"
+      - "traefik.docker.network=$NETWORK"
+networks:
+  default:
+    external:
+      name: $NETWORK
