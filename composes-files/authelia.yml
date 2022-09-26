@@ -39,7 +39,7 @@ services:
       AUTHELIA_STORAGE_POSTGRES_PASSWORD_FILE: /$SECRET/STORAGE_PASSWORD
       AUTHELIA_STORAGE_ENCRYPTION_KEY_FILE: /$SECRET/STORAGE_ENCRYPTION_KEY
     volumes:
-      - ${PWD}/$SERVICE:/config  
+      - ${PWD}/$SERVICE:/config
     healthcheck:
       test: curl --fail http://localhost:9091 || exit 1
       interval: 1m
