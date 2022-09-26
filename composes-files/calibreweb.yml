@@ -27,7 +27,7 @@ services:
       - DOCKER_MODS=linuxserver/calibre-web:calibre
     restart: unless-stopped
     volumes:
-      - $DATA_LOCATION/$SERVICE/:/config
+      - $DATA_LOCATION/$SERVICE:/config
       - $DATA_LOCATION/$SERVICE/Media/epub:/books
     ports:
       - 8333:8083
@@ -47,7 +47,6 @@ services:
       - "traefik.http.routers.$SERVICE.tls.certresolver=http"
       - "traefik.http.services.$SERVICE.loadbalancer.server.port=8333"
       - "traefik.docker.network=proxy"
-
 networks:
   default:
     external:
