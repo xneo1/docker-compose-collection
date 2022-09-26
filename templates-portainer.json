@@ -2696,6 +2696,42 @@
         },
         {
             "type": 3,
+            "title": "OpenBudgeteer",
+            "name": "OpenBudgeteer",
+            "description": "OpenBudgeteer is a budgeting app based on the Bucket Budgeting Principle and inspired by YNAB and Buckets.",
+            "note": "Website: <a href='https://github.com/TheAxelander/OpenBudgeteer' target='_blank' rel='noopener'>OpenBudgeteer</a>",
+            "categories": [
+                "Finance",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://github.com/TheAxelander/OpenBudgeteer/raw/master/assets/banner.png?raw=true",
+            "repository": {
+                "stackfile": "composes-files/openbudgeteer.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "OpenBudgeteer"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Openspeedtest",
             "name": "Openspeedtest",
             "description": "Speedtest for Home/Office LAN",
