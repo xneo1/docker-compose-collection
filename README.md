@@ -131,7 +131,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://juliebarbaroux.tech/wp-content/uploads/2020/11/zabbix.png" alt="zabbix" width="20"/> [zabbix](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/zabbix.yml) | [Zabbix.com](https://www.zabbix.com/) | 2022-05-11 |  Mickael "PAPAMICA" Asseline |
 
 ## List of services to do:
-<img src="https://img.shields.io/badge/To_do:_184-%23FF8800.svg?style=for-the-badge&logo=vlcmediaplayer&logoColor=white">
+<img src="https://img.shields.io/badge/To_do:_183-%23FF8800.svg?style=for-the-badge&logo=vlcmediaplayer&logoColor=white">
 
 | Status | Service |
 |:--:|--|
@@ -310,7 +310,6 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | 🚸 | webtrees |
 | 🚸 | wekan |
 | 🚸 | whoogle |
-| 🚸 | wikijs |
 | 🚸 | wireguard |
 | 🚸 | wiznote |
 | 🚸 | wowza |
