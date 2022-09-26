@@ -3,8 +3,8 @@
 
 #& type: 3
 #& title: Authelia
-#& description: Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies like nginx, Traefik, caddy or HAProxy to let them know whether requests should either be allowed or redirected to Authelia's portal for authentication.
-#& note: Website: <a href='https://www.authelia.com' target='_blank' rel='Authelia.com'>Authelia.com</a>
+#& description: Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications.
+#& note: Website: <a href='https://www.authelia.com' target='_blank' rel='noopener'>Authelia.com</a>
 #& categories: SelfHosted, Authorization, xneo1
 #& platform: linux
 #& logo: https://github.com/authelia/authelia/raw/master/docs/static/images/authelia-title.png
