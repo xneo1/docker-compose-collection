@@ -173,6 +173,55 @@
         },
         {
             "type": 3,
+            "title": "Authelia",
+            "name": "Authelia",
+            "description": "Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies like nginx, Traefik, caddy or HAProxy to let them know whether requests should either be allowed or redirected to Authelia's portal for authentication.",
+            "note": "Website: <a href='https://www.authelia.com' target='_blank' rel='Authelia.com'></a>",
+            "categories": [
+                "SelfHosted",
+                "Authorization",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://github.com/authelia/authelia/raw/master/docs/static/images/authelia-title.png",
+            "repository": {
+                "stackfile": "composes-files/authelia.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "authelia"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "SECRET",
+                    "label": "JWT-Secrets ",
+                    "description": "Example: /data/authelia/secrets/",
+                    "default": "/portainer/Files/AppData/Config/%SERVICE/secrets"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Autoheal",
             "name": "Autoheal",
             "description": "Restart your container when unhealthy",

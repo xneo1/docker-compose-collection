@@ -37,7 +37,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 
 ## List of services availables:
-<img src="https://img.shields.io/badge/Avaibles:_89-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
+<img src="https://img.shields.io/badge/Avaibles:_90-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
@@ -45,6 +45,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/a22d9206f80dfbb10748b6764fee932ff0ae1a8f/687474703a2f2f7265706f2e6e75787265662e636f6d2f7075622f696d672f6c6f676f2d617070726973652e706e67" alt="apprise-api" width="20"/> [apprise-api](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/apprise-api.yml) | [Github.com](https://github.com/caronc/apprise-api) | 2022-05-13 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://seeklogo.com/images/A/Aria_Pro_II-logo-6937ED8402-seeklogo.com.png" alt="aria2pro" width="20"/> [aria2pro](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/aria2pro.yml) | [Github.com](https://github.com/P3TERX/Aria2-Pro-Core/blob/master/README.md) | 2022-08-02 |  Vagelis Fragkos (xneo1) |
 | ✅ | <img src="https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/audacity-logo.png" alt="audacity" width="20"/> [audacity](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/audacity.yml) | [audacityTeam.org](https://www.audacityteam.org/ ) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
+| ✅ | <img src="https://github.com/authelia/authelia/raw/master/docs/static/images/authelia-title.png" alt="authelia" width="20"/> [authelia](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/authelia.yml) | []() | 2022-09-26 |  Vagelis Fragkos (xneo1) |
 | ✅ | <img src="https://cdn-icons-png.flaticon.com/512/4773/4773193.png" alt="autoheal" width="20"/> [autoheal](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/autoheal.yml) | [Github.com](https://github.com/willfarrell/docker-autoheal) | 2022-05-28 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://github.com/linuxserver/docker-templates/raw/master/linuxserver.io/img/babybuddy-logo.png" alt="babybuddy" width="20"/> [babybuddy](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/babybuddy.yml) | [Github.com](https://github.com/babybuddy/babybuddy) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://baserow.io/_nuxt/img/logo.1421f77.svg" alt="baserow" width="20"/> [baserow](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/baserow.yml) | [Baserow](https://baserow.io) | 2022-08-03 |  Vagelis Fragkos (xneo1) |
@@ -132,7 +133,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://juliebarbaroux.tech/wp-content/uploads/2020/11/zabbix.png" alt="zabbix" width="20"/> [zabbix](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/zabbix.yml) | [Zabbix.com](https://www.zabbix.com/) | 2022-05-11 |  Mickael "PAPAMICA" Asseline |
 
 ## List of services to do:
-<img src="https://img.shields.io/badge/To_do:_182-%23FF8800.svg?style=for-the-badge&logo=vlcmediaplayer&logoColor=white">
+<img src="https://img.shields.io/badge/To_do:_181-%23FF8800.svg?style=for-the-badge&logo=vlcmediaplayer&logoColor=white">
 
 | Status | Service |
 |:--:|--|
@@ -141,7 +142,6 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | 🚸 | alltube |
 | 🚸 | ampache |
 | 🚸 | astrat |
-| 🚸 | authelia |
 | 🚸 | cachethq |
 | 🚸 | chatwoot |
 | 🚸 | commento |
