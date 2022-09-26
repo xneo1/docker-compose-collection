@@ -37,7 +37,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 
 ## List of services availables:
-<img src="https://img.shields.io/badge/Avaibles:_84-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
+<img src="https://img.shields.io/badge/Avaibles:_85-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
@@ -75,6 +75,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 | ✅ | <img src="https://progsoft.net/images/hastebin-icon-b45e3f5695d3f577b2630648bd00584195822e3d.png" alt="hasty-paste" width="20"/> [hasty-paste](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/hasty-paste.yml) | [Hastebin.com](https://hastebin.com/about.md) | 2022-05-10 |  Vagelis Fragkos (Xneo1) |
 | ✅ | <img src="https://pbs.twimg.com/profile_images/1055543716201615365/geMDWaHV_400x400.jpg" alt="heathchecks" width="20"/> [heathchecks](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/heathchecks.yml) | [Github.com](https://github.com/healthchecks/healthchecks) | 2022-06-01 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/1200px-Home_Assistant_Logo.svg.png" alt="homeassistant" width="20"/> [homeassistant](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/homeassistant.yml) | [Home-Assistant.io](https://www.home-assistant.io/) | 2022-06-16 |  Mickael "PAPAMICA" Asseline |
+| ✅ | <img src="https://git.spip.net/repo-avatars/1417-1f8a32370f4028c9c0c216787ad4916c" alt="ihatemoney" width="20"/> [ihatemoney](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/ihatemoney.yml) | [Github.com](https://github.com/spiral-project/ihatemoney) | 2022-09-26 |  Vagelis Fragkos (xneo1) |
 | ✅ | <img src="https://user-images.githubusercontent.com/27040483/28728094-99f3e3f6-73c7-11e7-8f8d-28912dc6ac0d.png" alt="jackett" width="20"/> [jackett](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/jackett.yml) | [Gitub.com](https://github.com/Jackett/Jackett) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://developer.asustor.com/uploadIcons/0020_999_1568614440_Jellyfin_256.png" alt="jellyfin" width="20"/> [jellyfin](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/jellyfin.yml) | [Jellyfin.org](https://jellyfin.org/) | 2022-05-17 |  Mickael "PAPAMICA" Asseline |
 | ✅ | <img src="https://api.cloudron.io/api/v1/apps/net.jirafeau.cloudronapp/versions/1.2.0/icon" alt="jirafeau" width="20"/> [jirafeau](https://github.com/xneo1/docker-compose-collection/tree/master/composes-files/jirafeau.yml) | [Gitlab.com](https://gitlab.com/mojo42/Jirafeau) | 2022-05-10 |  Mickael "PAPAMICA" Asseline |
