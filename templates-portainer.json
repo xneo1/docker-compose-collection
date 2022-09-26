@@ -1733,6 +1733,48 @@
         },
         {
             "type": 3,
+            "title": "ImgProxy",
+            "name": "ImgProxy",
+            "description": "Optimize images for web on the fly. Imgproxy is the blazing fast and secure image processing tool",
+            "note": "Website: <a href='https://imgproxy.net/' target='_blank' rel='noopener'>ImgProxy.net</a>",
+            "categories": [
+                "SelfHosted",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://camo.githubusercontent.com/91957109fbb7a1037b9ad37dc826b330197fff975ce394a2e8ba83111907f2ef/68747470733a2f2f63646e2e7261776769742e636f6d2f446172746853696d2f696d6770726f78792f6d61737465722f6c6f676f2e737667",
+            "repository": {
+                "stackfile": "composes-files/imgproxy.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "imgproxy"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "Jackett",
             "name": "Jackett",
             "description": "Indexer for torrents and usenets.",
