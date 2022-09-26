@@ -51,7 +51,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 </div>
 
 ---
-# Utilisation
+# How to use
 ## Portainer
 Add this URL in Portainer:
 ```
