@@ -1,0 +1,68 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-09-26
+
+
+#& type: 3
+#& title: I hate money
+#& description: I hate money is a web application made to ease shared budget management. It keeps track of who bought what, when, and for whom; and helps to settle the bills.
+#& note: Website: <a href='https://github.com/spiral-project/ihatemoney' target='_blank' rel='noopener'>Github.com</a>
+#& categories: Finance, xneo1
+#& platform: linux
+#& logo: 
+
+#% SERVICE: Name of the service (No spaces or points) [ihatemoney]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+
+# Work with Portainer
+version: "3"
+services:
+  fireshare:
+    image: ihatemoney/ihatemoney:latest
+    restart: unless-stopped
+    container_name: $SERVICE
+    ports:
+      - "81302:80"
+    environment:
+      - DEBUG=False
+      - ACTIVATE_ADMIN_DASHBOARD=False
+      - ACTIVATE_DEMO_PROJECT=True
+      - ADMIN_PASSWORD=
+      - ALLOW_PUBLIC_PROJECT_CREATION=True
+      - BABEL_DEFAULT_TIMEZONE=Europe/Athens
+      - GREENLET_TEST_CPP=no
+      - MAIL_DEFAULT_SENDER="Budget manager <admin@example.com>"
+      - MAIL_PASSWORD=
+      - MAIL_PORT=25
+      - MAIL_SERVER=localhost
+      - MAIL_USE_SSL=False
+      - MAIL_USE_TLS=False
+      - MAIL_USERNAME=
+      - SECRET_KEY=tralala
+      - SESSION_COOKIE_SECURE=True
+      - SHOW_ADMIN_EMAIL=True
+      - SQLALCHEMY_DATABASE_URI=sqlite:////database/ihatemoney.db
+      - SQLALCHEMY_TRACK_MODIFICATIONS=False
+      - ENABLE_CAPTCHA=False
+      - LEGAL_LINK=
+      - PORT=81302
+      - PUID=0
+      - PGID=0
+    healthcheck:
+      test: curl --fail http://localhost:81302 || exit 1
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.http.services.$SERVICE.loadbalancer.server.port=8888"
+      - "traefik.docker.network=$NETWORK"
+networks:
+  default:
+    external:
+      name: $NETWORK
