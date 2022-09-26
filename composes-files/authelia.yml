@@ -1,0 +1,60 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-09-26
+
+#& type: 3
+#& title: Authelia
+#& description: Authelia is an open-source authentication and authorization server providing two-factor authentication and single sign-on (SSO) for your applications via a web portal. It acts as a companion for reverse proxies like nginx, Traefik, caddy or HAProxy to let them know whether requests should either be allowed or redirected to Authelia's portal for authentication.
+#& note: Website: <a href='https://www.authelia.com' target='_blank' rel='Authelia.com'></a>
+#& categories: SelfHosted, Authorization, xneo1
+#& platform: linux
+#& logo: https://github.com/authelia/authelia/raw/master/docs/static/images/authelia-title.png
+
+#% SERVICE: Name of the service (No spaces or points) [authelia]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% SECRET: JWT-Secrets (Example: /data/authelia/secrets/) [/portainer/Files/AppData/Config/%SERVICE/secrets]
+
+# Work with Portainer
+version: "3.8"
+secrets:
+  JWT_SECRET:
+    file: ${PWD}/$SECRET/JWT_SECRET
+  SESSION_SECRET:
+    file: ${PWD}/$SECRET/SESSION_SECRET
+  STORAGE_PASSWORD:
+    file: ${PWD}/$SECRET/STORAGE_PASSWORD
+  STORAGE_ENCRYPTION_KEY:
+    file: ${PWD}/$SECRET/STORAGE_ENCRYPTION_KEY
+services:
+  authelia:
+    image: docker.io/authelia/authelia:latest
+    restart: always
+    container_name: $SERVICE
+    ports:
+      - 9091:9091
+    environment:
+      AUTHELIA_JWT_SECRET_FILE: /$SECRET/JWT_SECRET
+      AUTHELIA_SESSION_SECRET_FILE: /$SECRET/SESSION_SECRET
+      AUTHELIA_STORAGE_POSTGRES_PASSWORD_FILE: /$SECRET/STORAGE_PASSWORD
+      AUTHELIA_STORAGE_ENCRYPTION_KEY_FILE: /$SECRET/STORAGE_ENCRYPTION_KEY
+    volumes:
+      - ${PWD}/$SERVICE:/config  
+    healthcheck:
+      test: curl --fail http://localhost:9091 || exit 1
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.http.services.$SERVICE.loadbalancer.server.port=9091"
+      - "traefik.docker.network=$NETWORK"
+networks:
+  default:
+    external:
+      name: $NETWORK
