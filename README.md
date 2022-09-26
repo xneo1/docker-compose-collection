@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=MuseoModerno&pause=1000&multiline=true&width=435&lines=Docker+Container+Collection;for+Portainer+%26+Traefik" alt="Typing SVG" /></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=MuseoModerno&size=21&duration=3000&pause=500&multiline=true&width=435&lines=Docker+Container+Collection;for+Portainer+%26+Traefik" alt="Typing SVG" /></a>
 </p>
 
 <p align="center">
