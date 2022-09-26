@@ -17,7 +17,7 @@
 # Work with Portainer
 version: "3"
 services:
-  fireshare:
+  ihatemoney:
     image: ihatemoney/ihatemoney:latest
     restart: unless-stopped
     container_name: $SERVICE
