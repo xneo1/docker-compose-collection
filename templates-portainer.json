@@ -1746,6 +1746,49 @@
         },
         {
             "type": 3,
+            "title": "Homepage",
+            "name": "Homepage",
+            "description": "Homepage is a new dashboard implementation that creates a super fast static site.",
+            "note": "Website: <a href='https://github.com/benphelps/homepage' target='_blank' rel='noopener'>Github.com</a>",
+            "categories": [
+                "SelfHosted",
+                "Dashboard",
+                "xneo1"
+            ],
+            "platform": "linux",
+            "logo": "https://github.com/benphelps/homepage/raw/main/images/preview.png",
+            "repository": {
+                "stackfile": "composes-files/homepage.yml",
+                "url": "https://github.com/xneo1/docker-compose-collection"
+            },
+            "env": [
+                {
+                    "name": "SERVICE",
+                    "label": "Name of the service ",
+                    "description": "No spaces or points",
+                    "default": "homepage"
+                },
+                {
+                    "name": "URL",
+                    "label": "Service URL",
+                    "description": "Example: service.com"
+                },
+                {
+                    "name": "NETWORK",
+                    "label": "Your Traefik network ",
+                    "description": "Example: proxy",
+                    "default": "proxy"
+                },
+                {
+                    "name": "DATA_LOCATION",
+                    "label": "Data location ",
+                    "description": "Example: /apps/service",
+                    "default": "/portainer/Files/AppData/Config"
+                }
+            ]
+        },
+        {
+            "type": 3,
             "title": "I hate money",
             "name": "I hate money",
             "description": "I hate money is a web application made to ease shared budget management. It keeps track of who bought what, when, and for whom; and helps to settle the bills.",
