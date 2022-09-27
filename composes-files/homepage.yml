@@ -1,0 +1,47 @@
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-09-27
+
+
+#& type: 3
+#& title: Homepage
+#& description: Homepage is a new dashboard implementation that creates a super fast static site.
+#& note: Website: <a href='https://github.com/benphelps/homepage' target='_blank' rel='noopener'>Github.com</a>
+#& categories: SelfHosted, Dashboard, xneo1
+#& platform: linux
+#& logo: https://github.com/benphelps/homepage/raw/main/images/preview.png
+
+#% SERVICE: Name of the service (No spaces or points) [homepage]
+#% URL: Service URL (Example: service.com)
+#% NETWORK: Your Traefik network (Example: proxy) [proxy]
+#% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
+
+# Work with Portainer
+version: "2"
+services:
+  homepage:
+    image: homepage
+    restart: always
+    container_name: $SERVICE
+    ports:
+      - 6006:3000
+    volumes:
+      - /$DATA_LOCATION/$SERVICE:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+    healthcheck:
+      test: curl --fail http://localhost:6006 || exit 1
+      interval: 1m
+      timeout: 30s
+      retries: 3
+    networks:
+      - default
+    labels:
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
+      - "traefik.enable=true"
+      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+      - "traefik.http.routers.$SERVICE.tls.certresolver=http"
+      - "traefik.http.services.$SERVICE.loadbalancer.server.port=6006"
+      - "traefik.docker.network=$NETWORK"
+networks:
+  default:
+    external:
+      name: $NETWORK
