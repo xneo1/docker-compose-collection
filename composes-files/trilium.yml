@@ -1,17 +1,17 @@
-# Maintainer: Quentin JOLY
-# Update: 2022-10-03
+# Maintainer: Vagelis Fragkos (xneo1)
+# Update: 2022-12-09
 
 #& type: 3
 #& title: Trilium
 #& description: Trilium Notes is a hierarchical note taking application
 #& note: Website: <a href='https://github.com/zadam/trilium/' target='_blank' rel='noopener'>Github Project</a>
-#& categories: SelfHosted, PAPAMICA
+#& categories: SelfHosted, xneo1
 #& platform: linux
 #& logo: https://raw.githubusercontent.com/zadam/trilium/master/images/app-icons/png/128x128.png
 
 #% SERVICE: Name of the service (No spaces or points) [trilium]
-#% DATA_LOCATION: Data localization (Example: /apps/service) [/_data/apps]
-#% URL: Service URL (Example: service.papamica.fr or service.com)
+#% DATA_LOCATION: Data localization (Example: /apps/service) [/portainer/Files/AppData/Config]
+#% URL: Service URL (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
 
 # Work with Portainer
@@ -32,7 +32,7 @@ services:
     networks:
       - default
     labels:
-      - "autoupdate=monitor" # https://github.com/PAPAMICA/container-updater
+      - "autoupdate=monitor" # https://github.com/xneo1/container-updater
       - "traefik.enable=true"
       - "traefik.http.routers.$SERVICE.entrypoints=https"
       - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
