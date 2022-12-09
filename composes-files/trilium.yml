@@ -35,7 +35,7 @@ services:
       - "autoupdate=monitor" # https://github.com/xneo1/container-updater
       - "traefik.enable=true"
       - "traefik.http.routers.$SERVICE.entrypoints=https"
-      - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
+     # - "traefik.http.routers.$SERVICE.rule=Host(`$URL`)"
       - "traefik.http.routers.$SERVICE.tls.certresolver=http"
       - "traefik.http.services.$SERVICE.loadbalancer.server.port=8080"
 
