@@ -13,18 +13,18 @@
 #% DATA_LOCATION: Data location (Example: /apps/service) [/portainer/Files/AppData/Config]
 #% URL: Service link (Example: service.com)
 #% NETWORK: Your Traefik network (Example: proxy) [proxy]
+#% TIME_ZONE: Time zone (Example : Europe/Athens) [Europe/Athens]
 
-# Work with Portainer
-version: "3"
+version: "3.8"
 services:
   calibreweb:
-    image: linuxserver/calibre-web
+    image: linuxserver/calibre-web:latest
     container_name: $SERVICE
     environment:
       - PUID=1000
       - PGID=100
-      - TZ=Europe/Athens
-      - DOCKER_MODS=linuxserver/calibre-web:calibre
+      - TZ=$TIME_ZONE
+      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
     restart: unless-stopped
     volumes:
       - $DATA_LOCATION/$SERVICE:/config
@@ -46,7 +46,7 @@ services:
       - "traefik.http.routers.$SERVICE.tls=true"
       - "traefik.http.routers.$SERVICE.tls.certresolver=http"
       - "traefik.http.services.$SERVICE.loadbalancer.server.port=8333"
-      - "traefik.docker.network=proxy"
+      - "traefik.docker.network=$NETWORK"
 networks:
   default:
     external:
