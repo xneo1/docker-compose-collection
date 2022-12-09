@@ -24,7 +24,7 @@ services:
       - PUID=1000
       - PGID=100
       - TZ=$TIME_ZONE
-      - DOCKER_MODS=linuxserver/mods:universal-calibre #optional
+      #- DOCKER_MODS=linuxserver/mods:universal-calibre #optional
     restart: unless-stopped
     volumes:
       - $DATA_LOCATION/$SERVICE:/config
