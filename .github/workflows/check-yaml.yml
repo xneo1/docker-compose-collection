@@ -8,6 +8,8 @@ jobs:
   check-yaml:
     runs-on: ubuntu-22.04
     steps:
+      - name: GitHub Actions Version Updater
+        uses: saadmk11/github-actions-version-updater@v0.7.1
       - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v4
