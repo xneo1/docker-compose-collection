@@ -7,7 +7,7 @@ jobs:
   check-yaml:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -20,7 +20,7 @@ jobs:
     needs: check-yaml
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Generate json file
         run: python3 .github/workflows/generate-template-json.py
       - name: update file and push to remote
