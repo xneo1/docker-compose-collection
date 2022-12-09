@@ -37,7 +37,7 @@ You can deploy a compatible Docker environment with Portainer and Traefik with:
 
 
 ## List of services:
-<img src="https://img.shields.io/badge/Available:_91-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white"
+<img src="https://img.shields.io/badge/Avaibles:_91-%2354B848.svg?style=for-the-badge&logo=cachet&logoColor=white">
 
 | Status | Service | Website | Update | Maintainer |
 |:--:|--|--|--|--|
